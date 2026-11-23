@@ -1,5 +1,7 @@
+
 @charset "UTF-8";
 
+/* VARIÁVEIS */
 :root {
     --color01: #f5f5f5; /* Branco */
     --color02: #aa653f; /* Bege */
@@ -8,199 +10,149 @@
     --color05: #050505; /* Preto */
 }
 
-body{
+/* CONFIGURAÇÕES GERAIS */
+body {
     font-family: "Roboto", "Open Sans", sans-serif;
     background-color: var(--color01);
     color: var(--color04);
+    margin: 0;
 }
 
-header{
+/* CABEÇALHO */
+header {
     width: 70%;
     max-width: 100%;
     margin: auto;
     text-align: center;
 }
 
-.perfil { /* Imagem do Perfil */
+/* FOTO DE PERFIL */
+.perfil {
     min-width: 10%;
     max-width: 30%;
-    margin: 200px auto 30px auto;
-    border-radius: 100%;
+    margin: 200px auto 30px;
+    border-radius: 50%;
 }
 
-header > h1 { /* Comprimento */ 
+/* TÍTULOS DO CABEÇALHO */
+header h1 {
     margin: 5px;
     font-weight: normal;
     font-size: 1rem;
 }
 
-header > h2 { /* Nome */
+header h2 {
     margin: 5px;
     font-weight: bold;
     font-size: 2.5rem;
 }
 
-header > h3 { /* Profissão */
+header h3 {
     margin: 5px;
     font-weight: bold;
     font-size: 1rem;
     color: var(--color02);
 }
 
-header > h4 { /* Frase */ 
+header h4 {
     margin: 5px;
     font-weight: normal;
     font-size: 1rem;
-    color: var(--color03)
+    color: var(--color04);
 }
 
-header > p { /* Seta */
-    margin: 50px 10px 100px 10px;
-    text-align: center;
-    font-weight: bold;
-    color: var(--color03);
+/* REDES SOCIAIS */
+.contato {
+    margin: 25px 10px;
 }
 
-.redessociais { /* Redes Sociais */
-    background-color: var(--color03);
-    max-width: 30px;
-    padding: 15px;
-    margin: 25px 5px 5px 5px;
-    border-radius: 20%;
+.contato a {
+    text-decoration: none;
     display: inline-block;
-    object-fit: cover; /* Como funciona? */
-    transition: transform 0.2s ease; /* Como funciona? */
+    line-height: 0;
 }
 
-.redessociais:hover { /* Redes Sociais */
-    transform: scale(1.2); /* Como funciona? */
+.redessociais {
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    margin: 25px 5px 5px;
+    border-radius: 20%;
+    background-color: var(--color04);
+    display: inline-block;
+    object-fit: cover;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.redessociais:hover {
+    transform: scale(1.2);
     background-color: var(--color02);
 }
 
-main { /* Principal */
+/* SETA */
+.seta {
+    margin: 50px 10px 100px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color04);
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
     text-align: justify;
     margin: 10%;
 }
 
-.sobre { /* Sobre mim */
+/* SOBRE MIM */
+.sobre {
     padding: 25px;
 }
 
-main > .sobre > h1{ /* Titulos da Principal */
+.sobre h1 {
     color: var(--color02);
 }
 
-main > .sobre > p > strong { /* Strong do Sobre Mim */
-    color: var(--color03);
+.sobre p strong {
+    color: var(--color04);
 }
 
+/* EOFOR */
+.eoforstudios,
+.eoforanimation,
+.eoformusic,
+.eoforgames {
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--color04);
+}
+
+/* CORES DOS LINKS EOFOR */
+.eoforstudios:hover {
+    color: #008b00;
+}
+
+.eoforanimation:hover {
+    color: #0077ff;
+}
+
+.eoformusic:hover {
+    color: #c40000;
+}
+
+.eoforgames:hover {
+    color: #ff8800;
+}
+
+/* NAVEGAÇÃO */
 .navegacao1 {
     max-width: 100%;
-}
-
-.navegacao1 > a { /* Projetos */
-    background-color: var(--color03);
-    padding: 15px 50px;
-    max-width: 25%;
-    margin: 15px auto;
-    border-radius: 20px;
-    display: block;
     text-align: center;
-    transition: transform 0.2s ease; /* Como funciona? */
-    text-decoration: none;
-    color: var(--color01);
-    font-weight: bold;
-    font-size: 1rem;
 }
 
-.navegacao1 > a:hover{ /* Projetos */
-    color: var(--color01);
-    background-color: var(--color02);
-    font-weight: bolder;
-}
-
-.navegacao2{
-    margin: auto;
-}
-
-.navegacao2 > a {
-    display: inline-block;
-    background-color: var(--color03);
-    padding: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 10px;
-    width: 150px 100px;
-    text-align: center;
-    color: var(--color01);
-    border-radius: 10px;
-}
-
-.navegacao2 > a:hover{ /* Projetos */
-    font-weight: bold;
-    background-color: var(--color02);
-}
-
-.projetos { /* Projetos */
-    width: 80%;
-    max-width: 100%;
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-}
-
-main > .projetos > h1 { /* Titulos dos Projetos */
-    color: var(--color02);
-}
-
-main > .projetos > h2 {
-    margin: 10px;
-    font-weight: bold;
-    font-size: 1rem;
-    color: var(--color03);
-}
-
-main > .projetos > .descricao > p > strong { /* Strong dos Paragrafos da descrição */
-    color: var(--color02);
-}
-
-iframe { /* Videos do Youtube */
-    width: 80%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
-
-.descricao { /* Descrições do Videos */
-    width: 80%;
-    max-width: 100%;
-    margin: auto;
-    padding: auto;
-}
-
-.contatos { /* Contato Fundo */
-    padding: 20px;
-}
-
-.contato { /* Contato Fundo */
-    margin: 25px;
-    background-color: var(--color03);
-    max-width: 30px;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 20%;
-    display: inline-block;
-    object-fit: cover; /* Como funciona? */
-    transition: transform 0.2s ease; /* Como funciona? */
-}
-
-.contato:hover { /* Animação do Contato Fundo */
-    transform: scale(1.2); /* Como funciona? */
-    background-color: var(--color02);
-}
-
-footer { /* Rodapé */
+/* RODAPÉ */
+footer {
     margin: 20px auto;
+    padding: 10px;
     text-align: center;
     color: var(--color03);
     font-size: 0.80rem;
